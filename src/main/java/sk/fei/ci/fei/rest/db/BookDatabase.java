@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class BookDatabase {
     
-    // In memory book database with initial state (3 books)
+    // In memory book database with initial state (4 books)
     private final Map<String, Book> bookDatabase = new HashMap<>();
     {
         bookDatabase.put("0544003411", new Book("0544003411", "The Lord of the Rings: The Fellowship of the Ring", "J.R.R Tolkien", 480));
@@ -48,7 +48,7 @@ public class BookDatabase {
     
     /**
      * Get all books.
-     * @return an array of {@link Book} objects. Empty array if there is no book in database.
+     * @return a list of {@link Book} objects. Empty list is returned if there is no book in database.
      */
     public synchronized List<Book> getAllBooks() {
         return new ArrayList(bookDatabase.values());
